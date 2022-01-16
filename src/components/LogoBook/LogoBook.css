@@ -1,0 +1,17 @@
+.Tilty {
+  background: linear-gradient(89deg, #51e3f3 0%, #ee47cc 0%); /* w3c */
+  border-radius: 15px;
+  border-style: none;
+}
+.btn {
+  cursor: pointer;
+  border: 5;
+  background-color: transparent;
+  height: 140px;
+  width: 140px;
+  border-radius: 15px;
+  color: #3498db;
+  font-size: 1.5em;
+  display: inline-block;
+  cursor: pointer;
+}

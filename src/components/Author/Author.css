@@ -1,0 +1,6 @@
+.Tilt {
+  background: linear-gradient(89deg, #51e3f3 0%,#ee47cc 0%); /* w3c */
+  border-radius: 15px;
+  border-style: dashed;
+  border-width: 5px;
+}
