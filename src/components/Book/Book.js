@@ -3,7 +3,7 @@ import BookLogo from "./Book.png";
 import PopUp from "../PopUp/PopUp";
 import "./Book.css";
 
-function Book({ isbn, title, author_id }) {
+function Book({ isbn, title, authorNames }) {
   const [isOpen, setIsOpen] = useState(false);
   const togglePopup = () => {
     setIsOpen(!isOpen);
@@ -25,7 +25,7 @@ function Book({ isbn, title, author_id }) {
             content={
               <>
               <h2> ISBN: {isbn}</h2>
-              <h2>authors: {author_id}</h2>
+              <h2>authors: {authorNames}</h2>
               </>
             }
             handleClose={togglePopup}

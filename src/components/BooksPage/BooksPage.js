@@ -6,14 +6,14 @@ import AddedLogo from "../AddedLogo/AddedLogo";
 import UpdateLogo from "../UpdateLogo/UpdateLogo";
 
 function BooksPage() {
-  const [books, setBooks] = useState([]);
+  const [booksList, setBooks] = useState([]);
   const [searchfield, setSearchfield] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:3001/books/")
       .then((response) => response.json())
       .then((res) => {
-        setBooks(res.books);
+        setBooks(res.booksList);
       });
   }, []);
 
@@ -21,11 +21,11 @@ function BooksPage() {
     setSearchfield(event.target.value);
   };
 
-  const filteredBooks = books.filter((book) => {
+  const filteredBooks = booksList.filter((book) => {
     return book.title.toLowerCase().includes(searchfield.toLowerCase());
   });
 
-  return !books.length ? (
+  return !booksList.length ? (
     <h1>Loading</h1>
   ) : (
     <div className="tc">
@@ -48,7 +48,7 @@ function BooksPage() {
         </div>
       </div>
       <Scroll>
-        <BookList books={filteredBooks} />
+        <BookList booksList={filteredBooks} />
       </Scroll>
     </div>
   );

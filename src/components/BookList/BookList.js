@@ -1,23 +1,24 @@
 import React from 'react';
 import Book from '../Book/Book';
 
-function BookList ({ books }) {
+function BookList ({ booksList }) {
   return (
     <div>
       {
-        books.map((user, i) => {
+        booksList.map((user, i) => {
           return (
             <Book 
               key={i}
-              isbn={books[i].isbn}
-              title={books[i].title}
-              author_id={books[i].author_id}
-              subtitle={books[i].subtitle}
-              published={books[i].published}
-              publisher={books[i].publisher}
-              pages={books[i].pages}
-              description={books[i].description}
-              website={books[i].website}   
+              isbn={booksList[i].isbn}
+              title={booksList[i].title}
+              author_id={booksList[i].author_id}
+              subtitle={booksList[i].subtitle}
+              published={booksList[i].published}
+              publisher={booksList[i].publisher}
+              pages={booksList[i].pages}
+              description={booksList[i].description}
+              website={booksList[i].website} 
+              authorNames={booksList[i].author_id.map(name => "'"+name.first_name+" "+name.last_name+"' ")}  
               />
           );
         })
